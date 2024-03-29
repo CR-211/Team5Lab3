@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
@@ -51,7 +52,7 @@ class Library {
 class Writer extends Thread {
     String name;
     ArrayList<String> bookList = new ArrayList<>(Arrays.asList("Book 1", "Book 2", "Book 3", "Book 4", "Book 5",
-            "Book 6", "Book 7", "Book 8", "Book 9", "Book 10", "Book 11", "Book 12", "Book 13"));
+            "Book 6", "Book 7", "Book 8"));
 
     public final Lock writeLock = Library.writeLock;
     ArrayList<String> library = Library.library;
@@ -156,9 +157,10 @@ public class Main {
     public static void main(String[] args) {
         final int writers = 5;
         final int readers = 10;
-        final int books = 13;
+        final int books = 8;
 
         Library library = new Library(writers, readers, books);
         library.start();
     }
 }
+
