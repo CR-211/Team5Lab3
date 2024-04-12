@@ -1,6 +1,3 @@
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.util.ArrayList;
 import java.util.HashSet;
 
@@ -20,6 +17,12 @@ public class WriterTest {
 
         HashSet<String> uniqueBooks = new HashSet<>(books);
         assertEquals(books.size(), uniqueBooks.size());
+    }
+
+
+    private void assertEquals(int size, int size2) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'assertEquals'");
     }
 
 

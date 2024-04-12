@@ -1,5 +1,4 @@
-import org.junit.Test;
-import static org.junit.Assert.*;
+
 
 public class LibraryTest {
 
@@ -11,6 +10,11 @@ public class LibraryTest {
         assertEquals(2, library.writers.length);
         assertEquals(3, library.readers.length);
         assertEquals(5, Library.books);
+    }
+
+    private void assertEquals(int i, int length) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'assertEquals'");
     }
 
     @Test
